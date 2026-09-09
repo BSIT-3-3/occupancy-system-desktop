@@ -1,0 +1,47 @@
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Test results
+TestResults/
+*.trx
+
+# Database files
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Publish files
+publish/
+PublishProfiles/
+
+# Code analysis
+*.sarif
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Local configuration and secrets
+appsettings.Local.json
+.env
