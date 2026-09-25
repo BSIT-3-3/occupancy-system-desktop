@@ -15,10 +15,13 @@ namespace OccupancyMonitor
     public partial class MainForm : Form
     {
         private prac _prac;
+        private UcRoom _room;
         public MainForm()
+
         {
             InitializeComponent();
             _prac = new prac();
+            _room = new UcRoom();
             ShowScreen(_prac);
         }
 
@@ -41,6 +44,11 @@ namespace OccupancyMonitor
         private void kbtnDashboard_Click(object sender, EventArgs e)
         {
             ShowScreen(_prac);
+        }
+
+        private void ktBtnRoom_Click(object sender, EventArgs e)
+        {
+            ShowScreen(_room);
         }
     }
 }
