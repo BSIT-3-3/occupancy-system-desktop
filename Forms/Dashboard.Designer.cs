@@ -1,6 +1,6 @@
 ﻿namespace OccupancyMonitor.Forms
 {
-    partial class prac
+    partial class Dashboard
     {
         /// <summary> 
         /// Required designer variable.

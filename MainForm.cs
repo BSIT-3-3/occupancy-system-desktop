@@ -14,11 +14,11 @@ namespace OccupancyMonitor
 {
     public partial class MainForm : Form
     {
-        private prac _prac;
+        private Dashboard _prac;
         public MainForm()
         {
             InitializeComponent();
-            _prac = new prac();
+            _prac = new Dashboard();
             ShowScreen(_prac);
         }
 
