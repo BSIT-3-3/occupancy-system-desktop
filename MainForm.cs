@@ -50,5 +50,15 @@ namespace OccupancyMonitor
         {
             ShowScreen(_room);
         }
+
+        private void kplNavBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kBtnActiveEmergency_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
