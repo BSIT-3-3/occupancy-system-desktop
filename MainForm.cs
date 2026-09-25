@@ -14,12 +14,12 @@ namespace OccupancyMonitor
 {
     public partial class MainForm : Form
     {
-        private Dashboard _prac;
+        private Dashboard _dashboard;
         public MainForm()
         {
             InitializeComponent();
-            _prac = new Dashboard();
-            ShowScreen(_prac);
+            _dashboard = new Dashboard();
+            ShowScreen(_dashboard);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace OccupancyMonitor
 
         private void kbtnDashboard_Click(object sender, EventArgs e)
         {
-            ShowScreen(_prac);
+            ShowScreen(_dashboard);
         }
     }
 }
