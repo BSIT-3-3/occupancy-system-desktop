@@ -119,6 +119,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\icons8-notification-50.png" />
+    <None Include="Resources\icons8-home-32.png" />
+    <None Include="Resources\icons8-home-24 %281%29.png" />
+    <None Include="Resources\icons8-home-24.png" />
+    <None Include="Resources\home icon.png" />
+    <None Include="Resources\home.png" />
     <None Include="Resources\house.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
