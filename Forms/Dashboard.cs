@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OccupancyMonitor.Forms
 {
-    public partial class prac : UserControl
+    public partial class Dashboard : UserControl
     {
-        public prac()
+        public Dashboard()
         {
             InitializeComponent();
         }

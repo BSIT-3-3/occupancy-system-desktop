@@ -43,7 +43,7 @@ namespace OccupancyMonitor
 
         private void kbtnDashboard_Click(object sender, EventArgs e)
         {
-            ShowScreen(_prac);
+            ShowScreen(_dashboard);
         }
 
         private void ktBtnRoom_Click(object sender, EventArgs e)
