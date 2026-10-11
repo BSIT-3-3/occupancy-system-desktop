@@ -15,13 +15,13 @@ namespace OccupancyMonitor
     public partial class MainForm : Form
     {
         private Dashboard _dashboard;
-        private UcRoom _room;
+        private w _room;
         public MainForm()
 
         {
             InitializeComponent();
             _dashboard = new Dashboard();
-            _room = new UcRoom();
+            _room = new w();
             ShowScreen(_dashboard);
         }
 
