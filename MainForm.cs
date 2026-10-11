@@ -14,15 +14,15 @@ namespace OccupancyMonitor
 {
     public partial class MainForm : Form
     {
-        private prac _prac;
+        private Dashboard _dashboard;
         private UcRoom _room;
         public MainForm()
 
         {
             InitializeComponent();
-            _prac = new prac();
+            _dashboard = new Dashboard();
             _room = new UcRoom();
-            ShowScreen(_prac);
+            ShowScreen(_dashboard);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
