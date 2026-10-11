@@ -36,7 +36,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kplNavBar)).BeginInit();
             this.kplNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpl)).BeginInit();
-            this.kpl.SuspendLayout();
             this.SuspendLayout();
             // 
             // kplNavBar
@@ -51,7 +50,7 @@
             // kbtnDashboard
             // 
             this.kbtnDashboard.CausesValidation = false;
-            this.kbtnDashboard.Location = new System.Drawing.Point(0, 79);
+            this.kbtnDashboard.Location = new System.Drawing.Point(0, 123);
             this.kbtnDashboard.Name = "kbtnDashboard";
             this.kbtnDashboard.Size = new System.Drawing.Size(187, 45);
             this.kbtnDashboard.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -86,7 +85,6 @@
             // 
             // kpl
             // 
-            this.kpl.Controls.Add(this.kbtnDashboard);
             this.kpl.Dock = System.Windows.Forms.DockStyle.Top;
             this.kpl.Location = new System.Drawing.Point(0, 0);
             this.kpl.Name = "kpl";
@@ -123,8 +121,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kplNavBar)).EndInit();
             this.kplNavBar.ResumeLayout(false);
+            this.kplNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpl)).EndInit();
-            this.kpl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +134,11 @@
         private System.Windows.Forms.ToolStrip tsTop;
         private Krypton.Toolkit.KryptonButton kbtnDashboard;
         private System.Windows.Forms.Panel plContent;
+        private Krypton.Toolkit.KryptonButton ktBtnAssistance;
+        private Krypton.Toolkit.KryptonButton kBtnActiveEmergency;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
