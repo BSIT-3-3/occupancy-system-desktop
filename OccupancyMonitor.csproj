@@ -129,6 +129,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\home-2-bold-duotone %281%29.png" />
+    <None Include="Resources\home-2-bold-duotone.png" />
+    <None Include="Resources\bell-bold-duotone %281%29.png" />
+    <None Include="Resources\bell-bold-duotone.png" />
     <None Include="Resources\icons8-notification-50.png" />
     <None Include="Resources\icons8-home-32.png" />
     <None Include="Resources\icons8-home-24 %281%29.png" />

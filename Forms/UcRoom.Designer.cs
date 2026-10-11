@@ -1,6 +1,6 @@
 ﻿namespace OccupancyMonitor.Forms
 {
-    partial class UcRoom
+    partial class w
     {
         /// <summary> 
         /// Required designer variable.
@@ -83,14 +83,14 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Good Morning, Administrator!";
             // 
-            // UcRoom
+            // w
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.plContent);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Name = "UcRoom";
+            this.Name = "w";
             this.Size = new System.Drawing.Size(839, 703);
             this.plContent.ResumeLayout(false);
             this.plContent.PerformLayout();

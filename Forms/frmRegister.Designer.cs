@@ -42,6 +42,8 @@
             this.txtusername2 = new System.Windows.Forms.TextBox();
             this.txtpassword2 = new System.Windows.Forms.TextBox();
             this.txtconfirmpassword2 = new System.Windows.Forms.TextBox();
+            this.chkShowPassword = new Krypton.Toolkit.KryptonCheckBox();
+            this.chkShowPassword1 = new Krypton.Toolkit.KryptonCheckBox();
             this.SuspendLayout();
             // 
             // label6
@@ -170,23 +172,44 @@
             // txtpassword2
             // 
             this.txtpassword2.Location = new System.Drawing.Point(231, 352);
-            this.txtpassword2.Multiline = true;
             this.txtpassword2.Name = "txtpassword2";
-            this.txtpassword2.Size = new System.Drawing.Size(367, 31);
+            this.txtpassword2.Size = new System.Drawing.Size(367, 20);
             this.txtpassword2.TabIndex = 15;
+            this.txtpassword2.UseSystemPasswordChar = true;
+            this.txtpassword2.TextChanged += new System.EventHandler(this.txtpassword2_TextChanged);
             // 
             // txtconfirmpassword2
             // 
             this.txtconfirmpassword2.Location = new System.Drawing.Point(231, 415);
-            this.txtconfirmpassword2.Multiline = true;
             this.txtconfirmpassword2.Name = "txtconfirmpassword2";
-            this.txtconfirmpassword2.Size = new System.Drawing.Size(367, 31);
+            this.txtconfirmpassword2.Size = new System.Drawing.Size(367, 20);
             this.txtconfirmpassword2.TabIndex = 16;
+            this.txtconfirmpassword2.UseSystemPasswordChar = true;
+            this.txtconfirmpassword2.TextChanged += new System.EventHandler(this.txtconfirmpassword2_TextChanged);
+            // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.Location = new System.Drawing.Point(231, 378);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(108, 20);
+            this.chkShowPassword.TabIndex = 17;
+            this.chkShowPassword.Values.Text = "Show Password";
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
+            // chkShowPassword1
+            // 
+            this.chkShowPassword1.Location = new System.Drawing.Point(231, 441);
+            this.chkShowPassword1.Name = "chkShowPassword1";
+            this.chkShowPassword1.Size = new System.Drawing.Size(108, 20);
+            this.chkShowPassword1.TabIndex = 18;
+            this.chkShowPassword1.Values.Text = "Show Password";
             // 
             // frmRegister
             // 
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(833, 633);
+            this.Controls.Add(this.chkShowPassword1);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.txtconfirmpassword2);
             this.Controls.Add(this.txtpassword2);
             this.Controls.Add(this.txtusername2);
@@ -202,6 +225,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
             this.Name = "frmRegister";
+            this.Load += new System.EventHandler(this.frmRegister_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +262,7 @@
         private System.Windows.Forms.TextBox txtusername2;
         private System.Windows.Forms.TextBox txtpassword2;
         private System.Windows.Forms.TextBox txtconfirmpassword2;
+        private Krypton.Toolkit.KryptonCheckBox chkShowPassword;
+        private Krypton.Toolkit.KryptonCheckBox chkShowPassword1;
     }
 }
