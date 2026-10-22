@@ -67,6 +67,12 @@
     <Compile Include="Forms\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RoomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomManagement.Designer.cs">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UcRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomManagement.resx">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>
