@@ -61,17 +61,19 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmRegister.cs">
+
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmRegister.Designer.cs">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UcRoom.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\frmtryopen.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UcRoom.Designer.cs">
-      <DependentUpon>UcRoom.cs</DependentUpon>
+    <Compile Include="Forms\frmtryopen.Designer.cs">
+      <DependentUpon>frmtryopen.cs</DependentUpon>
+
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -87,11 +89,13 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Forms\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
