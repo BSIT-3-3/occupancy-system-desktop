@@ -68,8 +68,16 @@
     <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmtryopen.cs">
+
+    <Compile Include="Forms\RoomManagement.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomManagement.Designer.cs">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UcRoom.cs">
+      <SubType>UserControl</SubType>
+
     </Compile>
     <Compile Include="Forms\frmtryopen.Designer.cs">
       <DependentUpon>frmtryopen.cs</DependentUpon>
@@ -92,6 +100,9 @@
 
     <EmbeddedResource Include="Forms\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomManagement.resx">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>
