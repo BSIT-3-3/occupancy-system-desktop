@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +46,7 @@
             this.label1.Location = new System.Drawing.Point(-2, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(688, 96);
+            this.label1.Size = new System.Drawing.Size(688, 102);
             this.label1.TabIndex = 6;
             this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -55,7 +54,7 @@
             // txtUsername
             // 
             this.txtUsername.AutoSize = true;
-            this.txtUsername.Location = new System.Drawing.Point(255, 154);
+            this.txtUsername.Location = new System.Drawing.Point(180, 145);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(0, 18);
@@ -64,42 +63,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(190, 172);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(109, 155);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 18);
+            this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Username:";
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(286, 164);
+            this.txtUser.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(197, 154);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(226, 26);
+            this.txtUser.Size = new System.Drawing.Size(173, 23);
             this.txtUser.TabIndex = 9;
             // 
             // txtPassword
             // 
             this.txtPassword.AutoSize = true;
-            this.txtPassword.Location = new System.Drawing.Point(190, 221);
+            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(109, 204);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(86, 18);
+            this.txtPassword.Size = new System.Drawing.Size(74, 18);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.Text = "Password:";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(286, 213);
+            this.txtPass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(197, 203);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(226, 26);
+            this.txtPass.Size = new System.Drawing.Size(173, 23);
             this.txtPass.TabIndex = 11;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(286, 273);
+            this.btnLogin.Location = new System.Drawing.Point(211, 264);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(81, 27);
@@ -110,10 +113,9 @@
             // 
             // btnShow
             // 
-            this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
-            this.btnShow.Location = new System.Drawing.Point(474, 214);
+            this.btnShow.Location = new System.Drawing.Point(341, 206);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(38, 23);
+            this.btnShow.Size = new System.Drawing.Size(25, 17);
             this.btnShow.TabIndex = 13;
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
@@ -122,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 490);
+            this.ClientSize = new System.Drawing.Size(590, 376);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPass);
@@ -135,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

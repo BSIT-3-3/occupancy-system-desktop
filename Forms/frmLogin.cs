@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net.Http;
+using OccupancyMonitor.Services;
+using OccupancyMonitor.Models;
 namespace WindowsFormsApp1
 {
     public partial class frmLogin : Form
     {
+        private HttpClient _client;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -19,34 +23,18 @@ namespace WindowsFormsApp1
             txtPass.UseSystemPasswordChar = true;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = "admin";
-            string password = "1234";
+            var login = new LoginService();
 
-            if (txtUser.Text == username && txtPass.Text == password)
+            var request = new LoginRequest()
             {
-                MessageBox.Show("Login Successful!",
-                                "Success",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                username = txtUser.Text,
+                password = txtPass.Text
+            };
 
-                frmTryOpen openForm = new frmTryOpen();
-                openForm.Show();
+           await login.Login(request);
 
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Incorrect username or password!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-
-                txtPass.Clear();
-
-                txtPass.Focus();
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,6 +58,11 @@ namespace WindowsFormsApp1
             {
                 txtPass.UseSystemPasswordChar = true;
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
