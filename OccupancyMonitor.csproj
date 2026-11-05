@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>OccupancyMonitor</RootNamespace>
     <AssemblyName>OccupancyMonitor</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -61,6 +61,12 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAssitanceRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAssitanceRequest.Designer.cs">
+      <DependentUpon>frmAssitanceRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="Forms\UcRoom.Designer.cs">
       <DependentUpon>UcRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UcRoomManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UcRoomManagement.Designer.cs">
+      <DependentUpon>UcRoomManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -87,11 +99,17 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAssitanceRequest.resx">
+      <DependentUpon>frmAssitanceRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UcRoomManagement.resx">
+      <DependentUpon>UcRoomManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -129,6 +147,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <None Include="Resources\green.png" />
+    <None Include="Resources\warn.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\b.png" />
     <None Include="Resources\home-2-bold-duotone %281%29.png" />
     <None Include="Resources\home-2-bold-duotone.png" />
     <None Include="Resources\bell-bold-duotone %281%29.png" />
