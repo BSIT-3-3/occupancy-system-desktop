@@ -9,19 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
 using OccupancyMonitor.Forms;
+using OccupancyMonitor.Services;
 
 namespace OccupancyMonitor
 {
     public partial class MainForm : Form
     {
         private Dashboard _dashboard;
-        private w _room;
-        public MainForm()
+        private ucRoom _room;
+        private ucUserProfile _userManagement;
+        public MainForm(string accesstoken)
 
         {
             InitializeComponent();
             _dashboard = new Dashboard();
-            _room = new w();
+            UserService _userService = new UserService();
+            _userManagement = new ucUserProfile(_userService, accesstoken);
             ShowScreen(_dashboard);
         }
 
@@ -59,6 +62,11 @@ namespace OccupancyMonitor
         private void kBtnActiveEmergency_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void kbtnUserManagement_Click(object sender, EventArgs e)
+        {
+            ShowScreen(_userManagement);
         }
     }
 }
