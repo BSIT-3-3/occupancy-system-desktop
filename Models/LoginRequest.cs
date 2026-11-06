@@ -15,8 +15,14 @@ namespace OccupancyMonitor.Models
     public class LoginResponse
     {
         public string message { get; set; } = string.Empty;
-        public LoginUser User { get; set; } 
+        public LoginUser User { get; set; }
+        public string access_token { get; set; } = string.Empty;
+        public string refresh_token { get; set; } = string.Empty;
+        public DateTime access_token_expires_at { get; set; }
+        public DateTime refresh_token_expires_at { get; set; }
+        public int session_id { get; set; }
     }
+
 
     public class LoginUser
     {

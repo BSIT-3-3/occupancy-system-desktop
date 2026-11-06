@@ -48,9 +48,9 @@ namespace OccupancyMonitor.Services
                     }
                 );
 
-                MessageBox.Show(result.User.Full_Name);
+                MessageBox.Show(result.access_token);
 
-                var frm = new MainForm();
+                var frm = new MainForm(result.access_token);
                 frm.Show();
                 return result;
             }

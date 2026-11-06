@@ -112,7 +112,7 @@ namespace OccupancyMonitor.Forms
 
         private async void ucRoom_Load(object sender, EventArgs e)
         {
-            var response = await _client.GetAsync();
+            var response = await _client.GetAsync("");
         }
     }
 }
