@@ -37,6 +37,7 @@
             this.tsTop = new System.Windows.Forms.ToolStrip();
             this.plContent = new System.Windows.Forms.Panel();
             this.btnRoomManagement = new Krypton.Toolkit.KryptonButton();
+            this.btnDeviceManagement = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kplNavBar)).BeginInit();
             this.kplNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpl)).BeginInit();
@@ -46,6 +47,7 @@
             // kplNavBar
             // 
             this.kplNavBar.Controls.Add(this.btnRoomManagement);
+            this.kplNavBar.Controls.Add(this.btnDeviceManagement);
             this.kplNavBar.Controls.Add(this.kbtnUserManagement);
             this.kplNavBar.Controls.Add(this.kbtnEmergency);
             this.kplNavBar.Controls.Add(this.kbtnAssistance);
@@ -259,6 +261,21 @@
             this.btnRoomManagement.TabIndex = 10;
             this.btnRoomManagement.Values.Text = "Room Management";
             this.btnRoomManagement.Click += new System.EventHandler(this.btnRoomManagement_Click);
+            //
+            // btnDeviceManagement
+            //
+            this.btnDeviceManagement.CausesValidation = false;
+            this.btnDeviceManagement.Location = new System.Drawing.Point(0, 366);
+            this.btnDeviceManagement.Name = "btnDeviceManagement";
+            this.btnDeviceManagement.Size = new System.Drawing.Size(187, 45);
+            this.btnDeviceManagement.StateCommon.Border.Rounding = 0F;
+            this.btnDeviceManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.btnDeviceManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
+            this.btnDeviceManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnDeviceManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnDeviceManagement.TabIndex = 11;
+            this.btnDeviceManagement.Values.Text = "Device Management";
+            this.btnDeviceManagement.Click += new System.EventHandler(this.btnDeviceManagement_Click);
             // 
             // MainForm
             // 
@@ -290,6 +307,7 @@
         private Krypton.Toolkit.KryptonButton kbtnAssistance;
         private Krypton.Toolkit.KryptonButton kbtnUserManagement;
         private Krypton.Toolkit.KryptonButton btnRoomManagement;
+        private Krypton.Toolkit.KryptonButton btnDeviceManagement;
     }
 }
 

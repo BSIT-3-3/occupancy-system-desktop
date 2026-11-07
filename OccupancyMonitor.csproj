@@ -142,11 +142,18 @@
     <Compile Include="Forms\UcRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\uccDeviceManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\uccDeviceManagement.Designer.cs">
+      <DependentUpon>uccDeviceManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ucUserProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\UserManagementRow.cs" />
     <Compile Include="Forms\RoomManagementRow.cs" />
+    <Compile Include="Forms\DeviceManagementRow.cs" />
     <Compile Include="Forms\ucUserProfile.Designer.cs">
       <DependentUpon>ucUserProfile.cs</DependentUpon>
     </Compile>
@@ -158,6 +165,7 @@
     </Compile>
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\RoomModel.cs" />
+    <Compile Include="Models\DeviceModels.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\ErrorResponse.cs" />
     <Compile Include="Models\UserManagementModels.cs" />
@@ -170,6 +178,7 @@
     <Compile Include="Services\ApiClient.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\RoomService.cs" />
+    <Compile Include="Services\DeviceService.cs" />
     <Compile Include="Forms\RoomEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\uccDeviceManagement.resx">
+      <DependentUpon>uccDeviceManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ucUserProfile.resx">
       <DependentUpon>ucUserProfile.cs</DependentUpon>

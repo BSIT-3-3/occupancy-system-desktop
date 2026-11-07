@@ -17,13 +17,16 @@ namespace OccupancyMonitor
     {
         private Dashboard _dashboard;
         private ucRoom _room;
+        private uccDeviceManagement _deviceManagement;
         private ucUserProfile _userManagement;
         public MainForm(string accesstoken, ApiClient apiClient)
 
         {
             InitializeComponent();
             _dashboard = new Dashboard();
-            _room = new ucRoom(new RoomService(apiClient), accesstoken);
+            var roomService = new RoomService(apiClient);
+            _room = new ucRoom(roomService, accesstoken);
+            _deviceManagement = new uccDeviceManagement(new DeviceService(apiClient), roomService, accesstoken);
             UserService _userService = new UserService(apiClient);
             _userManagement = new ucUserProfile(_userService, accesstoken);
             ShowScreen(_dashboard);
@@ -68,6 +71,12 @@ namespace OccupancyMonitor
         private void btnRoomManagement_Click(object sender, EventArgs e)
         {
             ShowScreen(_room);
+        }
+
+        private async void btnDeviceManagement_Click(object sender, EventArgs e)
+        {
+            ShowScreen(_deviceManagement);
+            await _deviceManagement.RefreshDataAsync();
         }
     }
 }
