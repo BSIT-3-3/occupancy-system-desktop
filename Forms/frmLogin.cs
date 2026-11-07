@@ -7,33 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Http;
+using OccupancyMonitor;
 using OccupancyMonitor.Services;
 using OccupancyMonitor.Models;
+using System.Net.Http;
 namespace WindowsFormsApp1
 {
     public partial class frmLogin : Form
     {
-        private HttpClient _client;
+        private readonly LoginService _loginService;
+        private readonly ApiClient _apiClient;
 
-        public frmLogin()
+        public frmLogin(ApiClient apiClient)
         {
             InitializeComponent();
+            _apiClient = apiClient;
+            _loginService = new LoginService(apiClient);
 
             txtPass.UseSystemPasswordChar = true;
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            var login = new LoginService();
-
             var request = new LoginRequest()
             {
                 username = txtUser.Text,
                 password = txtPass.Text
             };
 
-           await login.Login(request);
+            try
+            {
+                var result = await _loginService.LoginAsync(request);
+                var mainForm = new MainForm(result.access_token, _apiClient);
+                mainForm.Show();
+            }
+            catch (ApiException ex)
+            {
+                ErrorResponse error = null;
+                try
+                {
+                    error = System.Text.Json.JsonSerializer.Deserialize<ErrorResponse>(
+                        ex.ResponseBody,
+                        new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                }
+                catch (System.Text.Json.JsonException)
+                {
+                    // Keep the HTTP status message when the server body has another shape.
+                }
+
+                MessageBox.Show(error?.error ?? ex.Message);
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

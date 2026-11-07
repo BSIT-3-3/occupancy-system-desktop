@@ -18,12 +18,12 @@ namespace OccupancyMonitor
         private Dashboard _dashboard;
         private ucRoom _room;
         private ucUserProfile _userManagement;
-        public MainForm(string accesstoken)
+        public MainForm(string accesstoken, ApiClient apiClient)
 
         {
             InitializeComponent();
             _dashboard = new Dashboard();
-            UserService _userService = new UserService();
+            UserService _userService = new UserService(apiClient);
             _userManagement = new ucUserProfile(_userService, accesstoken);
             ShowScreen(_dashboard);
         }

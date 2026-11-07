@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Net.Http;
 using OccupancyMonitor.Forms;
+using OccupancyMonitor.Services;
 
 namespace OccupancyMonitor
 {
@@ -11,7 +13,12 @@ namespace OccupancyMonitor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WindowsFormsApp1.frmLogin());
+            var httpClient = new HttpClient
+            {
+                BaseAddress = new System.Uri("http://127.0.0.1:5000/")
+            };
+            var apiClient = new ApiClient(httpClient);
+            Application.Run(new WindowsFormsApp1.frmLogin(apiClient));
         }
     }
 }

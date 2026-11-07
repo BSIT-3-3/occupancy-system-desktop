@@ -1,73 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
 using System.Threading.Tasks;
-using System.Net.Http;
 using OccupancyMonitor.Models;
-using System.Text.Json;
-using System.Windows.Forms;
 
 namespace OccupancyMonitor.Services
 {
     public class LoginService
     {
-        private readonly HttpClient _httpClient;
+        private readonly ApiClient _apiClient;
 
-        public LoginService()
+        public LoginService(ApiClient apiClient)
         {
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri("http://127.0.0.1:5000/")
-            };
+            _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
         }
 
-        public async Task<LoginResponse> Login(LoginRequest requests)
+        public Task<LoginResponse> LoginAsync(LoginRequest request)
         {
-            var request = new LoginRequest()
-            {
-                username = requests.username,
-                password = requests.password
-            };
-
-            var json = JsonSerializer.Serialize(request);
-
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync("/api/auth/login", content);
-
-            var data = await response.Content.ReadAsStringAsync();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var result = JsonSerializer.Deserialize<LoginResponse>(
-                    data,
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    }
-                );
-
-                MessageBox.Show(result.access_token);
-
-                var frm = new MainForm(result.access_token);
-                frm.Show();
-                return result;
-            }
-            else
-            {
-                var error = JsonSerializer.Deserialize<ErrorResponse>(
-                    data,
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    }
-                );
-
-                MessageBox.Show(error?.error ?? "Unknown error");
-
-                return null;
-            }
+            if (request == null) throw new ArgumentNullException(nameof(request));
+            return _apiClient.PostAsync<LoginRequest, LoginResponse>("api/auth/login", request);
         }
     }
 }
