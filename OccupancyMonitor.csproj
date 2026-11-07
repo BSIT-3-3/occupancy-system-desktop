@@ -133,11 +133,11 @@
     <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RoomManagement.cs">
+    <Compile Include="Forms\frmRoomManagementDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RoomManagement.Designer.cs">
-      <DependentUpon>RoomManagement.cs</DependentUpon>
+    <Compile Include="Forms\frmRoomManagementDetails.Designer.cs">
+      <DependentUpon>frmRoomManagementDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UcRoom.cs">
       <SubType>UserControl</SubType>
@@ -145,6 +145,8 @@
     <Compile Include="Forms\ucUserProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Forms\UserManagementRow.cs" />
+    <Compile Include="Forms\RoomManagementRow.cs" />
     <Compile Include="Forms\ucUserProfile.Designer.cs">
       <DependentUpon>ucUserProfile.cs</DependentUpon>
     </Compile>
@@ -155,7 +157,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ErrorResponse.cs" />
     <Compile Include="Models\UserManagementModels.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -165,14 +169,21 @@
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\ApiClient.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\RoomService.cs" />
+    <Compile Include="Forms\RoomEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RoomManagement.resx">
-      <DependentUpon>RoomManagement.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmRoomManagementDetails.resx">
+      <DependentUpon>frmRoomManagementDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomEditorForm.resx">
+      <DependentUpon>RoomEditorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>

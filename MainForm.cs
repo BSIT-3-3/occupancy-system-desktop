@@ -23,6 +23,7 @@ namespace OccupancyMonitor
         {
             InitializeComponent();
             _dashboard = new Dashboard();
+            _room = new ucRoom(new RoomService(apiClient), accesstoken);
             UserService _userService = new UserService(apiClient);
             _userManagement = new ucUserProfile(_userService, accesstoken);
             ShowScreen(_dashboard);
@@ -49,11 +50,6 @@ namespace OccupancyMonitor
             ShowScreen(_dashboard);
         }
 
-        private void ktBtnRoom_Click(object sender, EventArgs e)
-        {
-            ShowScreen(_room);
-        }
-
         private void kplNavBar_Paint(object sender, PaintEventArgs e)
         {
 
@@ -67,6 +63,11 @@ namespace OccupancyMonitor
         private void kbtnUserManagement_Click(object sender, EventArgs e)
         {
             ShowScreen(_userManagement);
+        }
+
+        private void btnRoomManagement_Click(object sender, EventArgs e)
+        {
+            ShowScreen(_room);
         }
     }
 }

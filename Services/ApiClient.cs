@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using OccupancyMonitor.Models;
 
 namespace OccupancyMonitor.Services
 {
@@ -114,6 +115,25 @@ namespace OccupancyMonitor.Services
         {
             StatusCode = statusCode;
             ResponseBody = responseBody;
+        }
+
+        public string GetDisplayMessage()
+        {
+            if (!string.IsNullOrWhiteSpace(ResponseBody))
+            {
+                try
+                {
+                    var response = JsonSerializer.Deserialize<ErrorResponse>(ResponseBody,
+                        new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                    if (!string.IsNullOrWhiteSpace(response?.error)) return response.error;
+                }
+                catch (JsonException)
+                {
+                    // Use the HTTP status message when the body is not a known API error response.
+                }
+            }
+
+            return Message;
         }
     }
 }

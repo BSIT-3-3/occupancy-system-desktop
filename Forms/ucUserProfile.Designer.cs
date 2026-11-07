@@ -43,7 +43,6 @@ namespace OccupancyMonitor.Forms
             this.txtPassword = new Krypton.Toolkit.KryptonTextBox();
             this.cbStatus = new Krypton.Toolkit.KryptonComboBox();
             this.cbRole = new Krypton.Toolkit.KryptonComboBox();
-            this.txtFullname = new Krypton.Toolkit.KryptonTextBox();
             this.txtUsername = new Krypton.Toolkit.KryptonTextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -52,13 +51,14 @@ namespace OccupancyMonitor.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtFullname = new Krypton.Toolkit.KryptonTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
@@ -117,7 +117,6 @@ namespace OccupancyMonitor.Forms
             this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 5F;
             this.kryptonComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kryptonComboBox1.TabIndex = 3;
-            this.kryptonComboBox1.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -131,7 +130,6 @@ namespace OccupancyMonitor.Forms
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.cbStatus);
             this.groupBox1.Controls.Add(this.cbRole);
-            this.groupBox1.Controls.Add(this.txtFullname);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnEdit);
@@ -140,14 +138,13 @@ namespace OccupancyMonitor.Forms
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(696, 42);
+            this.groupBox1.Location = new System.Drawing.Point(693, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 602);
             this.groupBox1.TabIndex = 4;
@@ -163,7 +160,7 @@ namespace OccupancyMonitor.Forms
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // btnSave
             // 
@@ -174,14 +171,14 @@ namespace OccupancyMonitor.Forms
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            this.btnSave.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // dtpCreatedAt
             // 
             this.dtpCreatedAt.CustomFormat = "yyyy-MM-dd";
             this.dtpCreatedAt.Enabled = false;
             this.dtpCreatedAt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCreatedAt.Location = new System.Drawing.Point(114, 354);
+            this.dtpCreatedAt.Location = new System.Drawing.Point(114, 319);
             this.dtpCreatedAt.Name = "dtpCreatedAt";
             this.dtpCreatedAt.Size = new System.Drawing.Size(165, 23);
             this.dtpCreatedAt.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -192,35 +189,35 @@ namespace OccupancyMonitor.Forms
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(114, 246);
+            this.txtContactNumber.Location = new System.Drawing.Point(114, 211);
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(165, 23);
             this.txtContactNumber.TabIndex = 6;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(114, 210);
+            this.txtLastName.Location = new System.Drawing.Point(114, 175);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 23);
             this.txtLastName.TabIndex = 5;
             // 
             // txtMiddleName
             // 
-            this.txtMiddleName.Location = new System.Drawing.Point(114, 174);
+            this.txtMiddleName.Location = new System.Drawing.Point(114, 139);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Size = new System.Drawing.Size(165, 23);
             this.txtMiddleName.TabIndex = 4;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(114, 138);
+            this.txtFirstName.Location = new System.Drawing.Point(114, 103);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 23);
             this.txtFirstName.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(114, 102);
+            this.txtPassword.Location = new System.Drawing.Point(114, 67);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(165, 23);
             this.txtPassword.TabIndex = 2;
@@ -231,7 +228,7 @@ namespace OccupancyMonitor.Forms
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.DropDownWidth = 137;
             this.cbStatus.IntegralHeight = false;
-            this.cbStatus.Location = new System.Drawing.Point(114, 318);
+            this.cbStatus.Location = new System.Drawing.Point(114, 283);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(165, 23);
             this.cbStatus.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -247,7 +244,7 @@ namespace OccupancyMonitor.Forms
             this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRole.DropDownWidth = 137;
             this.cbRole.IntegralHeight = false;
-            this.cbRole.Location = new System.Drawing.Point(114, 282);
+            this.cbRole.Location = new System.Drawing.Point(114, 247);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(165, 23);
             this.cbRole.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -256,18 +253,6 @@ namespace OccupancyMonitor.Forms
             this.cbRole.StateCommon.ComboBox.Border.Rounding = 2F;
             this.cbRole.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.cbRole.TabIndex = 5;
-            // 
-            // txtFullname
-            // 
-            this.txtFullname.Location = new System.Drawing.Point(114, 66);
-            this.txtFullname.Name = "txtFullname";
-            this.txtFullname.ReadOnly = true;
-            this.txtFullname.Size = new System.Drawing.Size(165, 25);
-            this.txtFullname.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtFullname.StateCommon.Border.Rounding = 2F;
-            this.txtFullname.TabIndex = 13;
             // 
             // txtUsername
             // 
@@ -279,7 +264,6 @@ namespace OccupancyMonitor.Forms
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUsername.StateCommon.Border.Rounding = 2F;
             this.txtUsername.TabIndex = 5;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnDelete
             // 
@@ -289,7 +273,7 @@ namespace OccupancyMonitor.Forms
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            this.btnDelete.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // btnEdit
             // 
@@ -299,7 +283,7 @@ namespace OccupancyMonitor.Forms
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            this.btnEdit.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // btnAdd
             // 
@@ -309,13 +293,13 @@ namespace OccupancyMonitor.Forms
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            this.btnAdd.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 354);
+            this.label7.Location = new System.Drawing.Point(15, 319);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 16);
             this.label7.TabIndex = 9;
@@ -335,7 +319,7 @@ namespace OccupancyMonitor.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 318);
+            this.label5.Location = new System.Drawing.Point(15, 283);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 7;
@@ -345,21 +329,11 @@ namespace OccupancyMonitor.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 282);
+            this.label4.Location = new System.Drawing.Point(15, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Role:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Full Name:";
             // 
             // label2
             // 
@@ -374,7 +348,7 @@ namespace OccupancyMonitor.Forms
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 106);
+            this.label8.Location = new System.Drawing.Point(15, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 16;
@@ -383,7 +357,7 @@ namespace OccupancyMonitor.Forms
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 142);
+            this.label9.Location = new System.Drawing.Point(15, 107);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 17;
@@ -392,7 +366,7 @@ namespace OccupancyMonitor.Forms
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 178);
+            this.label10.Location = new System.Drawing.Point(15, 143);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 13);
             this.label10.TabIndex = 18;
@@ -401,7 +375,7 @@ namespace OccupancyMonitor.Forms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 214);
+            this.label11.Location = new System.Drawing.Point(15, 179);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 13);
             this.label11.TabIndex = 19;
@@ -410,11 +384,35 @@ namespace OccupancyMonitor.Forms
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 250);
+            this.label12.Location = new System.Drawing.Point(15, 215);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 13);
             this.label12.TabIndex = 20;
             this.label12.Text = "Contact number:";
+            // 
+            // txtFullname
+            // 
+            this.txtFullname.Location = new System.Drawing.Point(772, 666);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.ReadOnly = true;
+            this.txtFullname.Size = new System.Drawing.Size(165, 25);
+            this.txtFullname.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtFullname.StateCommon.Border.Rounding = 2F;
+            this.txtFullname.TabIndex = 13;
+            this.txtFullname.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(673, 670);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Full Name:";
+            this.label3.Visible = false;
             // 
             // ucUserProfile
             // 
@@ -426,8 +424,10 @@ namespace OccupancyMonitor.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.dgvUserManagement);
+            this.Controls.Add(this.txtFullname);
+            this.Controls.Add(this.label3);
             this.Name = "ucUserProfile";
-            this.Size = new System.Drawing.Size(1036, 660);
+            this.Size = new System.Drawing.Size(1002, 643);
             this.Load += new System.EventHandler(this.ucUserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
@@ -460,7 +460,6 @@ namespace OccupancyMonitor.Forms
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -474,5 +473,6 @@ namespace OccupancyMonitor.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -43,19 +43,7 @@ namespace WindowsFormsApp1
             }
             catch (ApiException ex)
             {
-                ErrorResponse error = null;
-                try
-                {
-                    error = System.Text.Json.JsonSerializer.Deserialize<ErrorResponse>(
-                        ex.ResponseBody,
-                        new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-                }
-                catch (System.Text.Json.JsonException)
-                {
-                    // Keep the HTTP status message when the server body has another shape.
-                }
-
-                MessageBox.Show(error?.error ?? ex.Message);
+                MessageBox.Show(ex.GetDisplayMessage());
             }
             catch (HttpRequestException ex)
             {

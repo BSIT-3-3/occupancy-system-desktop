@@ -1,5 +1,3 @@
-using System;
-
 namespace OccupancyMonitor.Models
 {
     public class UserProfile
@@ -18,30 +16,7 @@ namespace OccupancyMonitor.Models
         public string description { get; set; }
     }
 
-    public class UserManagementRow
-    {
-        public int UserId { get; set; }
-        public string Username { get; set; }
-        public string FullName { get; set; }
-        public string FirstName { get; set; }
-        public string MiddleName { get; set; }
-        public string LastName { get; set; }
-        public string ContactNumber { get; set; }
-        public string Role { get; set; }
-        public string Status { get; set; }
-        public DateTime CreatedAt { get; set; }
-    }
-
-    internal class CreateUserRequest
-    {
-        public string username { get; set; }
-        public string password { get; set; }
-        public string full_name { get; set; }
-        public int role_id { get; set; }
-        public string status { get; set; }
-    }
-
-    internal class UpdateUserRequest
+    internal class UserWriteRequest
     {
         public string username { get; set; }
         public string password { get; set; }

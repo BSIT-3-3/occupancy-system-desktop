@@ -33,12 +33,6 @@ namespace OccupancyMonitor.Models
         public string Status { get; set; } = string.Empty;
     }
 
-    public class ErrorResponse
-    {
-        public string error { get; set; } = string.Empty;
-    }
-
-
 }
 
 

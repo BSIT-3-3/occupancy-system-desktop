@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
@@ -52,7 +53,6 @@ namespace OccupancyMonitor.Forms
             kryptonTextBox1.TextChanged += FilterControls_Changed;
             kryptonComboBox1.SelectedIndexChanged += FilterControls_Changed;
 
-
             UpdateControlStates();
         }
 
@@ -67,7 +67,7 @@ namespace OccupancyMonitor.Forms
             await RefreshUsersAsync();
         }
 
-        private async System.Threading.Tasks.Task RefreshUsersAsync()
+        private async Task RefreshUsersAsync()
         {
             if (_isBusy) return;
             _isBusy = true;
@@ -122,7 +122,7 @@ namespace OccupancyMonitor.Forms
             }
             catch (Exception ex) when (ex is HttpRequestException || ex is JsonException || ex is InvalidOperationException)
             {
-                MessageBox.Show(GetApiMessage(ex), "User Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowApiError(ex);
             }
             finally
             {
@@ -300,7 +300,7 @@ namespace OccupancyMonitor.Forms
             txtUsername.Clear();
             txtFullname.Clear();
             txtPassword.Clear();
-            //txtFirstName.Clear();
+            txtFirstName.Clear();
             txtMiddleName.Clear();
             txtLastName.Clear();
             txtContactNumber.Clear();
@@ -357,34 +357,21 @@ namespace OccupancyMonitor.Forms
             dtpCreatedAt.Enabled = false;
         }
 
-        private static string GetApiMessage(Exception exception)
+        private static void ShowApiError(Exception exception)
         {
             var apiException = exception as ApiException;
-            if (apiException != null && !string.IsNullOrWhiteSpace(apiException.ResponseBody))
-            {
-                try
-                {
-                    var error = JsonSerializer.Deserialize<ErrorResponse>(apiException.ResponseBody,
-                        new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-                    if (!string.IsNullOrWhiteSpace(error?.error)) return error.error;
-                }
-                catch (JsonException)
-                {
-                    // Use the HTTP message for non-JSON error bodies.
-                }
-            }
-
-            return exception.Message;
+            var message = apiException == null ? exception.Message : apiException.GetDisplayMessage();
+            MessageBox.Show(message, "User Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
     
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             if (_formMode == UserFormMode.View || _isBusy || _isSaving) return;
             ResetToDefaultState();
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
             if (_formMode != UserFormMode.View || _isBusy || _isSaving) return;
             _selectedUserId = null;
@@ -393,7 +380,7 @@ namespace OccupancyMonitor.Forms
             txtUsername.Focus();
         }
 
-        private void btnEdit_Click_1(object sender, EventArgs e)
+        private void EditButton_Click(object sender, EventArgs e)
         {
             if (_formMode != UserFormMode.View || _isBusy || _isSaving) return;
             if (!_selectedUserId.HasValue)
@@ -406,7 +393,7 @@ namespace OccupancyMonitor.Forms
             txtUsername.Focus();
         }
 
-        private async void btnDelete_Click_1(object sender, EventArgs e)
+        private async void DeleteButton_Click(object sender, EventArgs e)
         {
             if (_formMode != UserFormMode.View || !_selectedUserId.HasValue)
             {
@@ -429,7 +416,7 @@ namespace OccupancyMonitor.Forms
             }
             catch (Exception ex) when (ex is HttpRequestException || ex is JsonException || ex is InvalidOperationException)
             {
-                MessageBox.Show(GetApiMessage(ex), "User Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowApiError(ex);
             }
             finally
             {
@@ -437,7 +424,7 @@ namespace OccupancyMonitor.Forms
             }
         }
 
-        private async void btnSave_Click_1(object sender, EventArgs e)
+        private async void SaveButton_Click(object sender, EventArgs e)
         {
             if (_formMode == UserFormMode.View)
             {
@@ -479,7 +466,7 @@ namespace OccupancyMonitor.Forms
             }
             catch (Exception ex) when (ex is HttpRequestException || ex is JsonException || ex is InvalidOperationException)
             {
-                MessageBox.Show(GetApiMessage(ex), "User Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowApiError(ex);
             }
             finally
             {
@@ -487,14 +474,5 @@ namespace OccupancyMonitor.Forms
             }
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

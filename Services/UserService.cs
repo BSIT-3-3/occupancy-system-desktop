@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 using OccupancyMonitor.Models;
 
 namespace OccupancyMonitor.Services
@@ -36,16 +36,9 @@ namespace OccupancyMonitor.Services
         public async Task<User> CreateUserAsync(
             User user, UserProfile profile, string password, string accessToken)
         {
-            var request = new CreateUserRequest
-            {
-                username = user.username,
-                password = password,
-                full_name = user.full_name,
-                role_id = user.role_id,
-                status = user.status
-            };
+            var request = ToUserWriteRequest(user, password);
 
-            var createdUser = await _apiClient.PostAsync<CreateUserRequest, User>(
+            var createdUser = await _apiClient.PostAsync<UserWriteRequest, User>(
                 "users", request, accessToken);
 
             if (createdUser == null || createdUser.user_id <= 0)
@@ -89,16 +82,8 @@ namespace OccupancyMonitor.Services
         public async Task UpdateUserAsync(
             User user, UserProfile profile, string password, bool profileExists, string accessToken)
         {
-            var userRequest = new UpdateUserRequest
-            {
-                username = user.username,
-                password = password,
-                full_name = user.full_name,
-                role_id = user.role_id,
-                status = user.status
-            };
-
-            await _apiClient.PutAsync<UpdateUserRequest, User>(
+            var userRequest = ToUserWriteRequest(user, password);
+            await _apiClient.PutAsync<UserWriteRequest, User>(
                 "users/" + user.user_id, userRequest, accessToken);
             try
             {
@@ -136,6 +121,18 @@ namespace OccupancyMonitor.Services
                 middle_name = profile.middle_name,
                 last_name = profile.last_name,
                 contact_number = profile.contact_number
+            };
+        }
+
+        private static UserWriteRequest ToUserWriteRequest(User user, string password)
+        {
+            return new UserWriteRequest
+            {
+                username = user.username,
+                password = password,
+                full_name = user.full_name,
+                role_id = user.role_id,
+                status = user.status
             };
         }
     }

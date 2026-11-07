@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.kplNavBar = new Krypton.Toolkit.KryptonPanel();
+            this.kbtnUserManagement = new Krypton.Toolkit.KryptonButton();
             this.kbtnEmergency = new Krypton.Toolkit.KryptonButton();
             this.kbtnAssistance = new Krypton.Toolkit.KryptonButton();
             this.kpl = new Krypton.Toolkit.KryptonPanel();
             this.kbtnDashboard = new Krypton.Toolkit.KryptonButton();
             this.tsTop = new System.Windows.Forms.ToolStrip();
             this.plContent = new System.Windows.Forms.Panel();
-            this.kbtnUserManagement = new Krypton.Toolkit.KryptonButton();
+            this.btnRoomManagement = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kplNavBar)).BeginInit();
             this.kplNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpl)).BeginInit();
@@ -44,6 +45,7 @@
             // 
             // kplNavBar
             // 
+            this.kplNavBar.Controls.Add(this.btnRoomManagement);
             this.kplNavBar.Controls.Add(this.kbtnUserManagement);
             this.kplNavBar.Controls.Add(this.kbtnEmergency);
             this.kplNavBar.Controls.Add(this.kbtnAssistance);
@@ -53,6 +55,42 @@
             this.kplNavBar.Name = "kplNavBar";
             this.kplNavBar.Size = new System.Drawing.Size(187, 647);
             this.kplNavBar.TabIndex = 4;
+            // 
+            // kbtnUserManagement
+            // 
+            this.kbtnUserManagement.CausesValidation = false;
+            this.kbtnUserManagement.Location = new System.Drawing.Point(0, 264);
+            this.kbtnUserManagement.Name = "kbtnUserManagement";
+            this.kbtnUserManagement.Size = new System.Drawing.Size(187, 45);
+            this.kbtnUserManagement.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnUserManagement.StateCommon.Border.Rounding = 0F;
+            this.kbtnUserManagement.StateCommon.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.kbtnUserManagement.StateCommon.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateCommon.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.kbtnUserManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
+            this.kbtnUserManagement.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.kbtnUserManagement.StateCommon.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.kbtnUserManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateTracking.Back.Color1 = System.Drawing.Color.CornflowerBlue;
+            this.kbtnUserManagement.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kbtnUserManagement.StateTracking.Back.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kbtnUserManagement.StateTracking.Content.LongText.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kbtnUserManagement.StateTracking.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.kbtnUserManagement.StateTracking.Content.LongText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateTracking.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateTracking.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateTracking.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.kbtnUserManagement.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateTracking.Content.ShortText.Prefix = Krypton.Toolkit.PaletteTextHotkeyPrefix.None;
+            this.kbtnUserManagement.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kbtnUserManagement.TabIndex = 9;
+            this.kbtnUserManagement.Values.Text = "User Management";
+            this.kbtnUserManagement.Click += new System.EventHandler(this.kbtnUserManagement_Click);
             // 
             // kbtnEmergency
             // 
@@ -186,41 +224,41 @@
             this.plContent.Size = new System.Drawing.Size(1138, 622);
             this.plContent.TabIndex = 6;
             // 
-            // kbtnUserManagement
+            // btnRoomManagement
             // 
-            this.kbtnUserManagement.CausesValidation = false;
-            this.kbtnUserManagement.Location = new System.Drawing.Point(0, 232);
-            this.kbtnUserManagement.Name = "kbtnUserManagement";
-            this.kbtnUserManagement.Size = new System.Drawing.Size(187, 45);
-            this.kbtnUserManagement.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnRoomManagement.CausesValidation = false;
+            this.btnRoomManagement.Location = new System.Drawing.Point(0, 315);
+            this.btnRoomManagement.Name = "btnRoomManagement";
+            this.btnRoomManagement.Size = new System.Drawing.Size(187, 45);
+            this.btnRoomManagement.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kbtnUserManagement.StateCommon.Border.Rounding = 0F;
-            this.kbtnUserManagement.StateCommon.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
-            this.kbtnUserManagement.StateCommon.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateCommon.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
-            this.kbtnUserManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
-            this.kbtnUserManagement.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
-            this.kbtnUserManagement.StateCommon.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kbtnUserManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateTracking.Back.Color1 = System.Drawing.Color.CornflowerBlue;
-            this.kbtnUserManagement.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kbtnUserManagement.StateTracking.Back.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.kbtnUserManagement.StateTracking.Content.LongText.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.kbtnUserManagement.StateTracking.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
-            this.kbtnUserManagement.StateTracking.Content.LongText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateTracking.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateTracking.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateTracking.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
-            this.kbtnUserManagement.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateTracking.Content.ShortText.Prefix = Krypton.Toolkit.PaletteTextHotkeyPrefix.None;
-            this.kbtnUserManagement.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kbtnUserManagement.TabIndex = 9;
-            this.kbtnUserManagement.Values.Text = "User Management";
-            this.kbtnUserManagement.Click += new System.EventHandler(this.kbtnUserManagement_Click);
+            this.btnRoomManagement.StateCommon.Border.Rounding = 0F;
+            this.btnRoomManagement.StateCommon.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btnRoomManagement.StateCommon.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateCommon.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.btnRoomManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
+            this.btnRoomManagement.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btnRoomManagement.StateCommon.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnRoomManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Back.Color1 = System.Drawing.Color.CornflowerBlue;
+            this.btnRoomManagement.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btnRoomManagement.StateTracking.Back.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.btnRoomManagement.StateTracking.Content.LongText.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.btnRoomManagement.StateTracking.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btnRoomManagement.StateTracking.Content.LongText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.btnRoomManagement.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.ShortText.Prefix = Krypton.Toolkit.PaletteTextHotkeyPrefix.None;
+            this.btnRoomManagement.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.TabIndex = 10;
+            this.btnRoomManagement.Values.Text = "Room Management";
+            this.btnRoomManagement.Click += new System.EventHandler(this.btnRoomManagement_Click);
             // 
             // MainForm
             // 
@@ -251,6 +289,7 @@
         private Krypton.Toolkit.KryptonButton kbtnEmergency;
         private Krypton.Toolkit.KryptonButton kbtnAssistance;
         private Krypton.Toolkit.KryptonButton kbtnUserManagement;
+        private Krypton.Toolkit.KryptonButton btnRoomManagement;
     }
 }
 
