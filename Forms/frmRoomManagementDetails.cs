@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
+using OccupancyMonitor.Styles;
 
 namespace OccupancyMonitor.Forms
 {
@@ -26,11 +27,7 @@ namespace OccupancyMonitor.Forms
             _service = service;
             _accessToken = accessToken;
 
-            btnEditRoom.BackColor = Color.FromArgb(40, 125, 250);
-            btnEditRoom.ForeColor = Color.White;
-            btnEditRoom.FlatStyle = FlatStyle.Flat;
-            btnEditRoom.FlatAppearance.BorderSize = 0;
-            btnEditRoom.UseVisualStyleBackColor = false;
+            AppButtonStyle.Apply(btnEditRoom, AppButtonType.Primary);
             BindRoom();
         }
 

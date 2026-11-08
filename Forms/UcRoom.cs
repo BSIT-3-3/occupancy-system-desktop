@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Krypton.Toolkit;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
+using OccupancyMonitor.Styles;
 
 namespace OccupancyMonitor.Forms
 {
@@ -43,6 +44,12 @@ namespace OccupancyMonitor.Forms
         public ucRoom(RoomService service, string accessToken)
         {
             InitializeComponent();
+            AppDataGridViewStyle.Apply(kdgvRooms);
+            AppButtonStyle.Apply(btnAdd, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnEdit, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnDelete, AppButtonType.Danger);
+            AppButtonStyle.Apply(btnSave, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnCancel, AppButtonType.Secondary);
             _editButton = btnEdit;
             _deactivateButton = btnDelete;
             _service = service ?? throw new ArgumentNullException(nameof(service));
@@ -57,7 +64,7 @@ namespace OccupancyMonitor.Forms
             cbStatusFilter.SelectedIndexChanged += RoomFilter_Changed;
             txtSearch.TextChanged += RoomFilter_Changed;
         }
-
+        #region -- initialize
         private void InitializeComponent()
         {
             this.kdgvRooms = new Krypton.Toolkit.KryptonDataGridView();
@@ -311,7 +318,7 @@ namespace OccupancyMonitor.Forms
             this.PerformLayout();
 
         }
-
+        #endregion
         private async Task LoadRoomsAsync()
         {
             try

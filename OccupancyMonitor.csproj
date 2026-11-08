@@ -179,6 +179,11 @@
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\RoomService.cs" />
     <Compile Include="Services\DeviceService.cs" />
+    <Compile Include="Services\DeviceMonitoringService.cs" />
+    <Compile Include="Models\DeviceMonitoringSummary.cs" />
+    <Compile Include="Styles\AppButtonStyle.cs" />
+    <Compile Include="Styles\AppButtonType.cs" />
+    <Compile Include="Styles\AppDataGridViewStyle.cs" />
     <Compile Include="Forms\RoomEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>

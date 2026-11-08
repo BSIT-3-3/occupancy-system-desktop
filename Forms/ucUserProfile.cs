@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
+using OccupancyMonitor.Styles;
 
 namespace OccupancyMonitor.Forms
 {
@@ -33,6 +34,12 @@ namespace OccupancyMonitor.Forms
         public ucUserProfile(UserService service, string accessToken)
         {
             InitializeComponent();
+            AppDataGridViewStyle.Apply(dgvUserManagement);
+            AppButtonStyle.Apply(btnAdd, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnEdit, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnDelete, AppButtonType.Danger);
+            AppButtonStyle.Apply(btnSave, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnCancel, AppButtonType.Secondary);
             _service = service ?? throw new ArgumentNullException(nameof(service));
             _accessToken = accessToken;
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
+using OccupancyMonitor.Styles;
 
 namespace OccupancyMonitor.Forms
 {
@@ -25,6 +26,12 @@ namespace OccupancyMonitor.Forms
         public uccDeviceManagement(DeviceService deviceService, RoomService roomService, string accessToken)
         {
             InitializeComponent();
+            AppDataGridViewStyle.Apply(dgvDevices);
+            AppButtonStyle.Apply(btnAdd, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnEdit, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnDelete, AppButtonType.Danger);
+            AppButtonStyle.Apply(btnSave, AppButtonType.Primary);
+            AppButtonStyle.Apply(btnCancel, AppButtonType.Secondary);
             _deviceService = deviceService ?? throw new ArgumentNullException(nameof(deviceService));
             _roomService = roomService ?? throw new ArgumentNullException(nameof(roomService));
             _accessToken = accessToken;

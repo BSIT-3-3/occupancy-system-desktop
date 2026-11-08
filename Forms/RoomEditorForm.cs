@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using OccupancyMonitor.Models;
+using OccupancyMonitor.Styles;
 
 namespace OccupancyMonitor.Forms
 {
@@ -27,8 +28,10 @@ namespace OccupancyMonitor.Forms
             _isActive.Text = "Active"; _isActive.Location = new Point(145, 108); _isActive.Checked = room == null || room.is_active;
 
             var save = new Button { Text = "Save", Location = new Point(180, 160), Size = new Size(85, 32) };
+            AppButtonStyle.Apply(save, AppButtonType.Primary);
             save.Click += (s, e) => ValidateAndClose();
             var cancel = new Button { Text = "Cancel", Location = new Point(275, 160), Size = new Size(85, 32), DialogResult = DialogResult.Cancel };
+            AppButtonStyle.Apply(cancel, AppButtonType.Secondary);
             Controls.AddRange(new Control[] { _roomNumber, _roomName, _isActive, save, cancel });
             AcceptButton = save; CancelButton = cancel;
             if (room != null) { _roomNumber.Text = room.room_number; _roomName.Text = room.room_name; }

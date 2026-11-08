@@ -101,7 +101,14 @@ namespace OccupancyMonitor.Services
                 return default(TResponse);
             }
 
-            return JsonSerializer.Deserialize<TResponse>(body, JsonOptions);
+            try
+            {
+                return JsonSerializer.Deserialize<TResponse>(body, JsonOptions);
+            }
+            catch (JsonException error)
+            {
+                throw new ApiResponseDeserializationException(response.StatusCode, body, error);
+            }
         }
     }
 
@@ -134,6 +141,22 @@ namespace OccupancyMonitor.Services
             }
 
             return Message;
+        }
+    }
+
+    public sealed class ApiResponseDeserializationException : Exception
+    {
+        public HttpStatusCode StatusCode { get; private set; }
+        public string ResponseBody { get; private set; }
+
+        public ApiResponseDeserializationException(
+            HttpStatusCode statusCode,
+            string responseBody,
+            JsonException innerException)
+            : base("The server response could not be parsed as the expected JSON model.", innerException)
+        {
+            StatusCode = statusCode;
+            ResponseBody = responseBody;
         }
     }
 }

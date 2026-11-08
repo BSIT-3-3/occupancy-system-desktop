@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.kplNavBar = new Krypton.Toolkit.KryptonPanel();
+            this.btnRoomManagement = new Krypton.Toolkit.KryptonButton();
+            this.btnDeviceManagement = new Krypton.Toolkit.KryptonButton();
             this.kbtnUserManagement = new Krypton.Toolkit.KryptonButton();
             this.kbtnEmergency = new Krypton.Toolkit.KryptonButton();
             this.kbtnAssistance = new Krypton.Toolkit.KryptonButton();
@@ -36,12 +38,23 @@
             this.kbtnDashboard = new Krypton.Toolkit.KryptonButton();
             this.tsTop = new System.Windows.Forms.ToolStrip();
             this.plContent = new System.Windows.Forms.Panel();
-            this.btnRoomManagement = new Krypton.Toolkit.KryptonButton();
-            this.btnDeviceManagement = new Krypton.Toolkit.KryptonButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lblConnection = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.lblTotal = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblActive = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.lbl = new System.Windows.Forms.ToolStripLabel();
+            this.lblInactive = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kplNavBar)).BeginInit();
             this.kplNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kpl)).BeginInit();
             this.kpl.SuspendLayout();
+            this.plContent.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kplNavBar
@@ -57,6 +70,60 @@
             this.kplNavBar.Name = "kplNavBar";
             this.kplNavBar.Size = new System.Drawing.Size(187, 647);
             this.kplNavBar.TabIndex = 4;
+            // 
+            // btnRoomManagement
+            // 
+            this.btnRoomManagement.CausesValidation = false;
+            this.btnRoomManagement.Location = new System.Drawing.Point(0, 315);
+            this.btnRoomManagement.Name = "btnRoomManagement";
+            this.btnRoomManagement.Size = new System.Drawing.Size(187, 45);
+            this.btnRoomManagement.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnRoomManagement.StateCommon.Border.Rounding = 0F;
+            this.btnRoomManagement.StateCommon.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btnRoomManagement.StateCommon.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateCommon.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.btnRoomManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
+            this.btnRoomManagement.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btnRoomManagement.StateCommon.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnRoomManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Back.Color1 = System.Drawing.Color.CornflowerBlue;
+            this.btnRoomManagement.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btnRoomManagement.StateTracking.Back.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.btnRoomManagement.StateTracking.Content.LongText.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.btnRoomManagement.StateTracking.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btnRoomManagement.StateTracking.Content.LongText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.btnRoomManagement.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.ShortText.Prefix = Krypton.Toolkit.PaletteTextHotkeyPrefix.None;
+            this.btnRoomManagement.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnRoomManagement.TabIndex = 10;
+            this.btnRoomManagement.Values.Text = "Room Management";
+            this.btnRoomManagement.Click += new System.EventHandler(this.btnRoomManagement_Click);
+            // 
+            // btnDeviceManagement
+            // 
+            this.btnDeviceManagement.CausesValidation = false;
+            this.btnDeviceManagement.Location = new System.Drawing.Point(0, 366);
+            this.btnDeviceManagement.Name = "btnDeviceManagement";
+            this.btnDeviceManagement.Size = new System.Drawing.Size(187, 45);
+            this.btnDeviceManagement.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnDeviceManagement.StateCommon.Border.Rounding = 0F;
+            this.btnDeviceManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
+            this.btnDeviceManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
+            this.btnDeviceManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnDeviceManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnDeviceManagement.TabIndex = 11;
+            this.btnDeviceManagement.Values.Text = "Device Management";
+            this.btnDeviceManagement.Click += new System.EventHandler(this.btnDeviceManagement_Click);
             // 
             // kbtnUserManagement
             // 
@@ -220,62 +287,92 @@
             // 
             // plContent
             // 
+            this.plContent.Controls.Add(this.toolStrip1);
             this.plContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plContent.Location = new System.Drawing.Point(187, 25);
             this.plContent.Name = "plContent";
             this.plContent.Size = new System.Drawing.Size(1138, 622);
             this.plContent.TabIndex = 6;
             // 
-            // btnRoomManagement
+            // toolStrip1
             // 
-            this.btnRoomManagement.CausesValidation = false;
-            this.btnRoomManagement.Location = new System.Drawing.Point(0, 315);
-            this.btnRoomManagement.Name = "btnRoomManagement";
-            this.btnRoomManagement.Size = new System.Drawing.Size(187, 45);
-            this.btnRoomManagement.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnRoomManagement.StateCommon.Border.Rounding = 0F;
-            this.btnRoomManagement.StateCommon.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
-            this.btnRoomManagement.StateCommon.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateCommon.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
-            this.btnRoomManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
-            this.btnRoomManagement.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
-            this.btnRoomManagement.StateCommon.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnRoomManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateTracking.Back.Color1 = System.Drawing.Color.CornflowerBlue;
-            this.btnRoomManagement.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.btnRoomManagement.StateTracking.Back.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.btnRoomManagement.StateTracking.Content.LongText.ImageAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.btnRoomManagement.StateTracking.Content.LongText.MultiLine = Krypton.Toolkit.InheritBool.True;
-            this.btnRoomManagement.StateTracking.Content.LongText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateTracking.Content.LongText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateTracking.Content.LongText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateTracking.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
-            this.btnRoomManagement.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateTracking.Content.ShortText.Prefix = Krypton.Toolkit.PaletteTextHotkeyPrefix.None;
-            this.btnRoomManagement.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnRoomManagement.TabIndex = 10;
-            this.btnRoomManagement.Values.Text = "Room Management";
-            this.btnRoomManagement.Click += new System.EventHandler(this.btnRoomManagement_Click);
-            //
-            // btnDeviceManagement
-            //
-            this.btnDeviceManagement.CausesValidation = false;
-            this.btnDeviceManagement.Location = new System.Drawing.Point(0, 366);
-            this.btnDeviceManagement.Name = "btnDeviceManagement";
-            this.btnDeviceManagement.Size = new System.Drawing.Size(187, 45);
-            this.btnDeviceManagement.StateCommon.Border.Rounding = 0F;
-            this.btnDeviceManagement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 15, 10, 10);
-            this.btnDeviceManagement.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Tai Le", 13.75F);
-            this.btnDeviceManagement.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnDeviceManagement.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnDeviceManagement.TabIndex = 11;
-            this.btnDeviceManagement.Values.Text = "Device Management";
-            this.btnDeviceManagement.Click += new System.EventHandler(this.btnDeviceManagement_Click);
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblConnection,
+            this.toolStripSeparator1,
+            this.toolStripLabel1,
+            this.lblTotal,
+            this.toolStripSeparator2,
+            this.lblActive,
+            this.toolStripLabel2,
+            this.toolStripSeparator3,
+            this.lbl,
+            this.lblInactive});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 597);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1138, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // lblConnection
+            // 
+            this.lblConnection.Name = "lblConnection";
+            this.lblConnection.Size = new System.Drawing.Size(100, 22);
+            this.lblConnection.Text = "Device status loading";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.AccessibleName = "lbl";
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(79, 22);
+            this.toolStripLabel1.Text = "Total Devices:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(13, 22);
+            this.lblTotal.Text = "--";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // lblActive
+            // 
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(43, 22);
+            this.lblActive.Text = "Active:";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(13, 22);
+            this.toolStripLabel2.Text = "--";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // lbl
+            // 
+            this.lbl.AccessibleName = "lbl";
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(51, 22);
+            this.lbl.Text = "Inactive:";
+            // 
+            // lblInactive
+            // 
+            this.lblInactive.Name = "lblInactive";
+            this.lblInactive.Size = new System.Drawing.Size(13, 22);
+            this.lblInactive.Text = "--";
             // 
             // MainForm
             // 
@@ -292,6 +389,10 @@
             this.kplNavBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kpl)).EndInit();
             this.kpl.ResumeLayout(false);
+            this.plContent.ResumeLayout(false);
+            this.plContent.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,6 +409,17 @@
         private Krypton.Toolkit.KryptonButton kbtnUserManagement;
         private Krypton.Toolkit.KryptonButton btnRoomManagement;
         private Krypton.Toolkit.KryptonButton btnDeviceManagement;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel lblConnection;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel lblTotal;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel lblActive;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripLabel lbl;
+        private System.Windows.Forms.ToolStripLabel lblInactive;
     }
 }
 
