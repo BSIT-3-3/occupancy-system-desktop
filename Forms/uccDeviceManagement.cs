@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
 using OccupancyMonitor.Styles;
+using OccupancyMonitor.Helpers;
 
 namespace OccupancyMonitor.Forms
 {
@@ -477,6 +478,11 @@ namespace OccupancyMonitor.Forms
             ClearFields();
             dgvDevices.ClearSelection();
             UpdateControlStates();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

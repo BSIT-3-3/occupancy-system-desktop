@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtDeviceId = new Krypton.Toolkit.KryptonTextBox();
             this.cbRoom = new Krypton.Toolkit.KryptonComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,15 +52,24 @@
             this.cbStatus = new Krypton.Toolkit.KryptonComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpCreatedAt = new Krypton.Toolkit.KryptonDateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.DeviceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeviceCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeviceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cbRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbStatusFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbStatus)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDeviceId
             // 
-            this.txtDeviceId.Location = new System.Drawing.Point(831, 91);
+            this.txtDeviceId.Location = new System.Drawing.Point(122, 66);
             this.txtDeviceId.Name = "txtDeviceId";
             this.txtDeviceId.Size = new System.Drawing.Size(165, 23);
             this.txtDeviceId.TabIndex = 23;
@@ -67,7 +80,7 @@
             this.cbRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRoom.DropDownWidth = 137;
             this.cbRoom.IntegralHeight = false;
-            this.cbRoom.Location = new System.Drawing.Point(831, 212);
+            this.cbRoom.Location = new System.Drawing.Point(122, 187);
             this.cbRoom.Name = "cbRoom";
             this.cbRoom.Size = new System.Drawing.Size(165, 23);
             this.cbRoom.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -80,25 +93,26 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(752, 254);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(65, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 25;
             this.label5.Text = "Status:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(752, 94);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(48, 70);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.Size = new System.Drawing.Size(72, 15);
             this.label9.TabIndex = 30;
             this.label9.Text = "Device ID:";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(42, 27);
+            this.txtSearch.Location = new System.Drawing.Point(175, 54);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(281, 27);
             this.txtSearch.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -109,53 +123,63 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(901, 504);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(169, 462);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(132, 36);
             this.btnCancel.TabIndex = 31;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.Violet;
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(757, 504);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(25, 462);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(132, 36);
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(757, 462);
+            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(25, 420);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(276, 36);
             this.btnDelete.TabIndex = 28;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(757, 414);
+            this.btnEdit.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(25, 372);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(276, 36);
             this.btnEdit.TabIndex = 27;
             this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(757, 366);
+            this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(25, 324);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(276, 36);
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // dgvDevices
             // 
@@ -164,6 +188,13 @@
             this.dgvDevices.AllowUserToResizeColumns = false;
             this.dgvDevices.AllowUserToResizeRows = false;
             this.dgvDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDevices.ColumnHeadersHeight = 40;
+            this.dgvDevices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DeviceID,
+            this.DeviceCode,
+            this.DeviceName,
+            this.Room,
+            this.Status});
             this.dgvDevices.Location = new System.Drawing.Point(22, 91);
             this.dgvDevices.MultiSelect = false;
             this.dgvDevices.Name = "dgvDevices";
@@ -175,40 +206,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(754, 135);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(91, 15);
             this.label1.TabIndex = 34;
             this.label1.Text = "Device Code:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(754, 172);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(96, 15);
             this.label2.TabIndex = 35;
             this.label2.Text = "Device Name:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(752, 212);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 36;
             this.label3.Text = "Room:";
             // 
             // txtDeviceCode
             // 
-            this.txtDeviceCode.Location = new System.Drawing.Point(832, 133);
+            this.txtDeviceCode.Location = new System.Drawing.Point(123, 108);
             this.txtDeviceCode.Name = "txtDeviceCode";
             this.txtDeviceCode.Size = new System.Drawing.Size(165, 23);
             this.txtDeviceCode.TabIndex = 37;
             // 
             // txtDeviceName
             // 
-            this.txtDeviceName.Location = new System.Drawing.Point(832, 171);
+            this.txtDeviceName.Location = new System.Drawing.Point(123, 146);
             this.txtDeviceName.Name = "txtDeviceName";
             this.txtDeviceName.Size = new System.Drawing.Size(165, 23);
             this.txtDeviceName.TabIndex = 38;
@@ -219,7 +253,7 @@
             this.cbStatusFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatusFilter.DropDownWidth = 137;
             this.cbStatusFilter.IntegralHeight = false;
-            this.cbStatusFilter.Location = new System.Drawing.Point(394, 27);
+            this.cbStatusFilter.Location = new System.Drawing.Point(529, 54);
             this.cbStatusFilter.Name = "cbStatusFilter";
             this.cbStatusFilter.Size = new System.Drawing.Size(165, 23);
             this.cbStatusFilter.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -235,7 +269,7 @@
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.DropDownWidth = 137;
             this.cbStatus.IntegralHeight = false;
-            this.cbStatus.Location = new System.Drawing.Point(831, 254);
+            this.cbStatus.Location = new System.Drawing.Point(122, 229);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(165, 23);
             this.cbStatus.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -248,10 +282,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(752, 295);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(40, 273);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(81, 15);
             this.label4.TabIndex = 42;
             this.label4.Text = "Register At:";
             // 
@@ -260,7 +294,7 @@
             this.dtpCreatedAt.CustomFormat = "yyyy-MM-dd";
             this.dtpCreatedAt.Enabled = false;
             this.dtpCreatedAt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCreatedAt.Location = new System.Drawing.Point(832, 295);
+            this.dtpCreatedAt.Location = new System.Drawing.Point(123, 270);
             this.dtpCreatedAt.Name = "dtpCreatedAt";
             this.dtpCreatedAt.Size = new System.Drawing.Size(165, 23);
             this.dtpCreatedAt.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -269,30 +303,98 @@
             this.dtpCreatedAt.StateCommon.Border.Rounding = 2F;
             this.dtpCreatedAt.TabIndex = 43;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.dtpCreatedAt);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cbStatus);
+            this.groupBox1.Controls.Add(this.txtDeviceName);
+            this.groupBox1.Controls.Add(this.txtDeviceCode);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtDeviceId);
+            this.groupBox1.Controls.Add(this.cbRoom);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnEdit);
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Location = new System.Drawing.Point(742, 75);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(318, 515);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(108, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 16);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "Search:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(478, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 16);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Role:";
+            // 
+            // DeviceID
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeviceID.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DeviceID.HeaderText = "Device ID";
+            this.DeviceID.Name = "DeviceID";
+            // 
+            // DeviceCode
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeviceCode.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DeviceCode.HeaderText = "Device Code";
+            this.DeviceCode.Name = "DeviceCode";
+            // 
+            // DeviceName
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeviceName.DefaultCellStyle = dataGridViewCellStyle7;
+            this.DeviceName.HeaderText = "Device Name";
+            this.DeviceName.Name = "DeviceName";
+            // 
+            // Room
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Room.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Room.HeaderText = "Room";
+            this.Room.Name = "Room";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            // 
             // uccDeviceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dtpCreatedAt);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbStatus);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbStatusFilter);
-            this.Controls.Add(this.txtDeviceName);
-            this.Controls.Add(this.txtDeviceCode);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDevices);
-            this.Controls.Add(this.txtDeviceId);
-            this.Controls.Add(this.cbRoom);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
             this.Name = "uccDeviceManagement";
             this.Size = new System.Drawing.Size(1080, 630);
             this.Load += new System.EventHandler(this.uccDeviceManagement_Load);
@@ -300,6 +402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbStatusFilter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbStatus)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +431,13 @@
         private Krypton.Toolkit.KryptonComboBox cbStatus;
         private System.Windows.Forms.Label label4;
         private Krypton.Toolkit.KryptonDateTimePicker dtpCreatedAt;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeviceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeviceCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeviceName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Label label6;
     }
 }

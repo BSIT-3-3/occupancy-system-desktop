@@ -1,9 +1,12 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace OccupancyMonitor.Forms
+namespace OccupancyMonitor.Helpers
 {
-    // Projection used only to bind the joined user/profile/role data to the grid.
-    public class UserManagementRow
+    class UserManagementRow
     {
         public int UserId { get; set; }
         public string Username { get; set; }

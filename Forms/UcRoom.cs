@@ -9,6 +9,7 @@ using Krypton.Toolkit;
 using OccupancyMonitor.Models;
 using OccupancyMonitor.Services;
 using OccupancyMonitor.Styles;
+using OccupancyMonitor.Helpers;
 
 namespace OccupancyMonitor.Forms
 {
