@@ -83,5 +83,10 @@ namespace OccupancyMonitor.Forms
                 }
             }
         }
+
+        private void Deviceinformation_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -33,19 +33,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.RoomStatusPanel = new Krypton.Toolkit.KryptonPanel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.Deviceinformation = new Krypton.Toolkit.KryptonPanel();
+            this.label26 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.btnEditRoom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RoomStatusPanel)).BeginInit();
             this.RoomStatusPanel.SuspendLayout();
@@ -113,6 +113,131 @@
             this.RoomStatusPanel.Size = new System.Drawing.Size(474, 209);
             this.RoomStatusPanel.TabIndex = 7;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 10.75F);
+            this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label15.Location = new System.Drawing.Point(281, 178);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(176, 20);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Sept, 7 2026   12:20PM";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label14.Location = new System.Drawing.Point(372, 126);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 24);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Available";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
+            this.label13.ForeColor = System.Drawing.Color.Green;
+            this.label13.Location = new System.Drawing.Point(396, 72);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 23);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Active";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label12.Location = new System.Drawing.Point(-5, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(483, 16);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "_________________________________________________________________________________" +
+    "______________";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(-5, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(483, 16);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "_________________________________________________________________________________" +
+    "______________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label10.Location = new System.Drawing.Point(-3, 50);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(483, 16);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "_________________________________________________________________________________" +
+    "______________";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
+            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label9.Location = new System.Drawing.Point(4, 175);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 23);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Last Activity";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
+            this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label8.Location = new System.Drawing.Point(3, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 23);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Occupancy";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
+            this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label7.Location = new System.Drawing.Point(4, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 23);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Monitoring";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label5.Location = new System.Drawing.Point(3, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 28);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Room 3-4";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -135,131 +260,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "DEV-004";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(3, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 28);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Room 3-4";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
-            this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(4, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 23);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Monitoring";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
-            this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(3, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 23);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Occupancy";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(4, 175);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 23);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Last Activity";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(-3, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(483, 16);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "_________________________________________________________________________________" +
-    "______________";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(-5, 105);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(483, 16);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "_________________________________________________________________________________" +
-    "______________";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(-5, 155);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(483, 16);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "_________________________________________________________________________________" +
-    "______________";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
-            this.label13.ForeColor = System.Drawing.Color.Green;
-            this.label13.Location = new System.Drawing.Point(396, 72);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 23);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Active";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label14.Location = new System.Drawing.Point(372, 126);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 24);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Available";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 10.75F);
-            this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label15.Location = new System.Drawing.Point(281, 178);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(176, 20);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Sept, 7 2026   12:20PM";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
             // Deviceinformation
             // 
             this.Deviceinformation.Controls.Add(this.label26);
@@ -275,6 +275,19 @@
             this.Deviceinformation.PaletteMode = Krypton.Toolkit.PaletteMode.Office2010SilverLightMode;
             this.Deviceinformation.Size = new System.Drawing.Size(474, 161);
             this.Deviceinformation.TabIndex = 18;
+            this.Deviceinformation.Paint += new System.Windows.Forms.PaintEventHandler(this.Deviceinformation_Paint);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label26.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
+            this.label26.ForeColor = System.Drawing.Color.Green;
+            this.label26.Location = new System.Drawing.Point(396, 132);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(64, 23);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "Online";
             // 
             // label18
             // 
@@ -360,18 +373,6 @@
             this.label25.Size = new System.Drawing.Size(217, 28);
             this.label25.TabIndex = 10;
             this.label25.Text = "Device Information";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label26.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F);
-            this.label26.ForeColor = System.Drawing.Color.Green;
-            this.label26.Location = new System.Drawing.Point(396, 132);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(64, 23);
-            this.label26.TabIndex = 18;
-            this.label26.Text = "Online";
             // 
             // btnEditRoom
             // 

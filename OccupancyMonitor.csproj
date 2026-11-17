@@ -151,12 +151,12 @@
     <Compile Include="Forms\ucUserProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\UserManagementRow.cs" />
-    <Compile Include="Forms\RoomManagementRow.cs" />
-    <Compile Include="Forms\DeviceManagementRow.cs" />
     <Compile Include="Forms\ucUserProfile.Designer.cs">
       <DependentUpon>ucUserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DeviceManagementRow.cs" />
+    <Compile Include="Helpers\RoomManagementRow.cs" />
+    <Compile Include="Helpers\UserManagementRow.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

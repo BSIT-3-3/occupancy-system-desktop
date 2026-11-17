@@ -1,13 +1,23 @@
-namespace OccupancyMonitor.Forms
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OccupancyMonitor.Helpers
 {
-    // Display projection used by the Room Management DataGridView.
-    public sealed class RoomManagementRow
+    class RoomManagementRow
     {
-        public int RoomId { get; set; }
-        public string Room { get; set; }
-        public string Device { get; set; }
-        public string LastActivity { get; set; }
-        public string Occupancy { get; set; }
-        public string Status { get; set; }
+    public int RoomId { get; set; }
+    public string Room { get; set; }
+    public string Device { get; set; }
+    public string LastActivity { get; set; }
+    public string Occupancy { get; set; }
+    public string Status { get; set; }
+
+
+
+
+
     }
 }
