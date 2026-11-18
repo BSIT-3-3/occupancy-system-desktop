@@ -127,7 +127,17 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\frmLogin.cs">
+=======
+    <Compile Include="Forms\frmExit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExit.Designer.cs">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegister.cs">
+>>>>>>> 18e7c6b (feat: Update Assistance Request)
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmLogin.Designer.cs">
@@ -196,6 +206,7 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +215,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RoomEditorForm.resx">
       <DependentUpon>RoomEditorForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Forms\frmExit.resx">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+>>>>>>> 18e7c6b (feat: Update Assistance Request)
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcRoom.resx">
       <DependentUpon>UcRoom.cs</DependentUpon>

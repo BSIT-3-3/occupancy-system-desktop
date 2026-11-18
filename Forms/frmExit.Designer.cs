@@ -28,10 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.btnCloseTry = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnCloseTry
+            // 
+            this.btnCloseTry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCloseTry.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCloseTry.Location = new System.Drawing.Point(234, 146);
+            this.btnCloseTry.Name = "btnCloseTry";
+            this.btnCloseTry.Size = new System.Drawing.Size(132, 59);
+            this.btnCloseTry.TabIndex = 1;
+            this.btnCloseTry.Text = "Exit";
+            this.btnCloseTry.UseVisualStyleBackColor = false;
+            this.btnCloseTry.Click += new System.EventHandler(this.btnCloseTry_Click);
+            // 
+            // frmExit
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCloseTry);
+            this.Name = "frmExit";
+            this.Size = new System.Drawing.Size(596, 391);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCloseTry;
     }
 }

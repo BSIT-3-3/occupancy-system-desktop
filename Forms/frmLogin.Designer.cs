@@ -107,7 +107,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(0, -22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(328, 513);
             this.label1.TabIndex = 12;
@@ -279,10 +279,11 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // UserControl1
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(818, 474);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtPass);
@@ -293,8 +294,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(834, 513);
+            this.Name = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 >>>>>>> 7f8b870 (frmLogin, frmExit)

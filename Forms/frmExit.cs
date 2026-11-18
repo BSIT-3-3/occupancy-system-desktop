@@ -16,5 +16,19 @@ namespace OccupancyMonitor.Forms
         {
             InitializeComponent();
         }
+
+        private void btnCloseTry_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "Are you sure you want to exit?",
+               "Exit",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
